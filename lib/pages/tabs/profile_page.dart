@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:interactive_learn/core/providers/auth_provider.dart';
+import 'package:interactive_learn/core/providers/theme_provider.dart';
 import 'package:interactive_learn/core/singleton.dart';
 
 class ProfilePage extends ConsumerWidget {
@@ -8,6 +9,7 @@ class ProfilePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final theme = ref.read(appThemeProvider.notifier);
     final user = ref.watch(currentUserProvider);
     final email = user?.email ?? 'Unknown';
     final displayName = email.split('@').first;
@@ -91,7 +93,9 @@ class ProfilePage extends ConsumerWidget {
                   title: const Text('Theme'),
                   subtitle: const Text('Light / Dark mode'),
                   trailing: const Icon(Icons.chevron_right),
-                  onTap: () {},
+                  onTap: () {
+                    theme.toggleTheme();
+                  },
                   shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.vertical(bottom: Radius.circular(12)),
                   ),
