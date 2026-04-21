@@ -2,6 +2,14 @@ import 'package:go_router_paths/go_router_paths.dart';
 
 /// Centralized route paths powered by go_router_paths.
 abstract final class AppRoutePaths {
+  static const rootPath = '/';
+  static const loginPath = '/login';
+  static const signupPath = '/signup';
+  static const searchPath = '/search';
+  static const leaderboardPath = '/leaderboard';
+  static const progressPath = '/progress';
+  static const profilePath = '/profile';
+
   static final root = Path('/');
   static final login = Path('login');
   static final signup = Path('signup');
