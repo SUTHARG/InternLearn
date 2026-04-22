@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:interactive_learn/features/progress/data/models/progress_summary.dart';
-import 'package:interactive_learn/features/progress/presentation/widgets/progress_stat_card.dart';
+import 'package:nexus/features/progress/data/models/progress_summary.dart';
+import 'package:nexus/features/progress/presentation/widgets/progress_stat_card.dart';
 
 class ProgressSummaryRow extends StatelessWidget {
   final ProgressSummary summary;

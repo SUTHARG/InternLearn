@@ -1,5 +1,5 @@
-import 'package:interactive_learn/features/search/data/models/search_result_item.dart';
-import 'package:interactive_learn/features/search/services/search_service.dart';
+import 'package:nexus/features/search/data/models/search_result_item.dart';
+import 'package:nexus/features/search/services/search_service.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'search_provider.g.dart';

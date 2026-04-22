@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_debouncer/flutter_debouncer.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:interactive_learn/core/routes/app_routes.dart';
-import 'package:interactive_learn/features/search/data/models/search_result_item.dart';
-import 'package:interactive_learn/features/search/data/riverpod/search_provider.dart';
-import 'package:interactive_learn/core/skeleton/loading_skeletons.dart';
+import 'package:nexus/core/routes/app_routes.dart';
+import 'package:nexus/features/search/data/models/search_result_item.dart';
+import 'package:nexus/features/search/data/riverpod/search_provider.dart';
+import 'package:nexus/core/skeleton/loading_skeletons.dart';
 
 class SearchScreen extends HookConsumerWidget {
   const SearchScreen({super.key});

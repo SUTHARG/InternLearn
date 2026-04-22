@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:interactive_learn/features/progress/data/riverpod/progress_provider.dart';
-import 'package:interactive_learn/core/skeleton/loading_skeletons.dart';
-import 'package:interactive_learn/features/progress/presentation/widgets/progress_completed_lessons_tab.dart';
-import 'package:interactive_learn/features/progress/presentation/widgets/progress_header.dart';
-import 'package:interactive_learn/features/progress/presentation/widgets/progress_level_card.dart';
-import 'package:interactive_learn/features/progress/presentation/widgets/progress_overview_tab.dart';
-import 'package:interactive_learn/features/progress/presentation/widgets/progress_summary_row.dart';
-import 'package:interactive_learn/features/progress/presentation/widgets/progress_weekly_tab.dart';
+import 'package:nexus/features/progress/data/riverpod/progress_provider.dart';
+import 'package:nexus/core/skeleton/loading_skeletons.dart';
+import 'package:nexus/features/progress/presentation/widgets/progress_completed_lessons_tab.dart';
+import 'package:nexus/features/progress/presentation/widgets/progress_header.dart';
+import 'package:nexus/features/progress/presentation/widgets/progress_level_card.dart';
+import 'package:nexus/features/progress/presentation/widgets/progress_overview_tab.dart';
+import 'package:nexus/features/progress/presentation/widgets/progress_summary_row.dart';
+import 'package:nexus/features/progress/presentation/widgets/progress_weekly_tab.dart';
 
 class ProgressScreen extends HookConsumerWidget {
   const ProgressScreen({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:interactive_learn/features/progress/data/models/progress_summary.dart';
+import 'package:nexus/features/progress/data/models/progress_summary.dart';
 
 class ProgressOverviewTab extends StatelessWidget {
   final ProgressSummary summary;

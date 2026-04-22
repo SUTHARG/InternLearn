@@ -1,5 +1,5 @@
-import 'package:interactive_learn/features/content/data/models/subject.dart';
-import 'package:interactive_learn/core/singleton.dart';
+import 'package:nexus/features/content/data/models/subject.dart';
+import 'package:nexus/core/singleton.dart';
 
 class SubjectService {
   static Future<List<Subject>> fetchSubjects() async {

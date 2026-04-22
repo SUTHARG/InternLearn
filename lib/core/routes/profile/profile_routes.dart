@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:interactive_learn/features/profile/presentation/screens/avatar_picker_screen.dart';
-import 'package:interactive_learn/features/profile/presentation/screens/edit_profile_screen.dart';
+import 'package:nexus/features/profile/presentation/screens/avatar_picker_screen.dart';
+import 'package:nexus/features/profile/presentation/screens/edit_profile_screen.dart';
 
 part 'profile_routes.g.dart';
 

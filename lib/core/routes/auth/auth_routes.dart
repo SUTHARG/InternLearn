@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:interactive_learn/features/auth/presentation/screens/login_screen.dart';
-import 'package:interactive_learn/features/auth/presentation/screens/signup_screen.dart';
+import 'package:nexus/features/auth/presentation/screens/login_screen.dart';
+import 'package:nexus/features/auth/presentation/screens/signup_screen.dart';
 
 part 'auth_routes.g.dart';
 

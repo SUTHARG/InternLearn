@@ -1,7 +1,7 @@
-import 'package:interactive_learn/features/content/data/models/chapter.dart';
-import 'package:interactive_learn/features/content/data/models/subject.dart';
-import 'package:interactive_learn/features/content/data/models/subtopic.dart';
-import 'package:interactive_learn/features/content/data/models/topic.dart';
+import 'package:nexus/features/content/data/models/chapter.dart';
+import 'package:nexus/features/content/data/models/subject.dart';
+import 'package:nexus/features/content/data/models/subtopic.dart';
+import 'package:nexus/features/content/data/models/topic.dart';
 
 enum SearchEntityType { subject, chapter, topic, subtopic }
 

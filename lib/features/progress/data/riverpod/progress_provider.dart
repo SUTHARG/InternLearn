@@ -1,9 +1,9 @@
-import 'package:interactive_learn/features/progress/data/models/progress_summary.dart';
-import 'package:interactive_learn/features/progress/data/models/progress_update_result.dart';
-import 'package:interactive_learn/features/progress/data/models/completed_lesson.dart';
-import 'package:interactive_learn/features/progress/data/models/weekly_subject_progress.dart';
-import 'package:interactive_learn/features/auth/data/riverpod/auth_provider.dart';
-import 'package:interactive_learn/features/progress/service/progress_service.dart';
+import 'package:nexus/features/progress/data/models/progress_summary.dart';
+import 'package:nexus/features/progress/data/models/progress_update_result.dart';
+import 'package:nexus/features/progress/data/models/completed_lesson.dart';
+import 'package:nexus/features/progress/data/models/weekly_subject_progress.dart';
+import 'package:nexus/features/auth/data/riverpod/auth_provider.dart';
+import 'package:nexus/features/progress/service/progress_service.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'progress_provider.g.dart';

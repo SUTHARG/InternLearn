@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:interactive_learn/features/profile/data/models/user_profile.dart';
-import 'package:interactive_learn/core/singleton.dart';
+import 'package:nexus/features/profile/data/models/user_profile.dart';
+import 'package:nexus/core/singleton.dart';
 
 class AccountFilledDetails {
   String name;

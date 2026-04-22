@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:interactive_learn/features/progress/data/models/completed_lesson.dart';
+import 'package:nexus/features/progress/data/models/completed_lesson.dart';
 
 class ProgressCompletedLessonsTab extends StatelessWidget {
   final List<CompletedLesson> lessons;

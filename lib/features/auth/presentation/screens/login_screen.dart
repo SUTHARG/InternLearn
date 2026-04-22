@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:interactive_learn/features/auth/presentation/widgets/login_form.dart';
+import 'package:nexus/features/auth/presentation/widgets/login_form.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -15,10 +15,10 @@ class LoginScreen extends StatelessWidget {
             children: [
               const SizedBox(height: 32),
               Image.asset(
-                'assets/images/logo.png',
-                height: 90,
-                width: 160,
-                fit: BoxFit.cover,
+                'assets/images/app_logo.png',
+                height: 120,
+                width: 200,
+                fit: BoxFit.contain,
               ),
               const SizedBox(height: 32),
               const LoginForm(),

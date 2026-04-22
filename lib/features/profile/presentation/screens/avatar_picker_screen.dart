@@ -3,8 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:interactive_learn/features/profile/data/riverpod/user_profile_provider.dart';
-import 'package:interactive_learn/features/auth/services/auth_service.dart';
+import 'package:nexus/features/profile/data/riverpod/user_profile_provider.dart';
+import 'package:nexus/features/auth/services/auth_service.dart';
 import 'package:random_avatar/random_avatar.dart';
 
 class AvatarPickerScreen extends ConsumerStatefulWidget {

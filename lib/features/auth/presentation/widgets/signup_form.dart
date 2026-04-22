@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:interactive_learn/features/auth/services/auth_service.dart';
-import 'package:interactive_learn/core/singleton.dart';
+import 'package:nexus/features/auth/services/auth_service.dart';
+import 'package:nexus/core/singleton.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class SignupForm extends HookConsumerWidget {

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:interactive_learn/core/routes/app_routes.dart';
-import 'package:interactive_learn/features/auth/data/riverpod/auth_provider.dart';
-import 'package:interactive_learn/core/theme/riverpod/theme_provider.dart';
-import 'package:interactive_learn/features/profile/data/riverpod/user_profile_provider.dart';
-import 'package:interactive_learn/core/singleton.dart';
-import 'package:interactive_learn/core/skeleton/loading_skeletons.dart';
+import 'package:nexus/core/routes/app_routes.dart';
+import 'package:nexus/features/auth/data/riverpod/auth_provider.dart';
+import 'package:nexus/core/theme/riverpod/theme_provider.dart';
+import 'package:nexus/features/profile/data/riverpod/user_profile_provider.dart';
+import 'package:nexus/core/singleton.dart';
+import 'package:nexus/core/skeleton/loading_skeletons.dart';
 import 'package:random_avatar/random_avatar.dart';
 
 class ProfileScreen extends ConsumerWidget {

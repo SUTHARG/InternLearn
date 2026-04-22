@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:interactive_learn/core/routes/app_routes.dart';
-import 'package:interactive_learn/features/auth/data/riverpod/auth_provider.dart';
-import 'package:interactive_learn/features/content/data/riverpod/content_provider.dart';
-import 'package:interactive_learn/core/skeleton/loading_skeletons.dart';
-import 'package:interactive_learn/core/landing/widgets/subject_grid.dart';
+import 'package:nexus/core/routes/app_routes.dart';
+import 'package:nexus/features/auth/data/riverpod/auth_provider.dart';
+import 'package:nexus/features/content/data/riverpod/content_provider.dart';
+import 'package:nexus/core/skeleton/loading_skeletons.dart';
+import 'package:nexus/core/landing/widgets/subject_grid.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});

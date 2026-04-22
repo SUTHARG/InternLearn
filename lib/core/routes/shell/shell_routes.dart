@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:interactive_learn/core/landing/screens/home_screen.dart';
-import 'package:interactive_learn/features/leaderboard/presentation/screens/leaderboard_screen.dart';
-import 'package:interactive_learn/features/profile/presentation/screens/profile_screen.dart';
-import 'package:interactive_learn/features/progress/presentation/screens/progress_screen.dart';
-import 'package:interactive_learn/features/search/presentation/screens/search_screen.dart';
+import 'package:nexus/core/landing/screens/home_screen.dart';
+import 'package:nexus/features/leaderboard/presentation/screens/leaderboard_screen.dart';
+import 'package:nexus/features/profile/presentation/screens/profile_screen.dart';
+import 'package:nexus/features/progress/presentation/screens/progress_screen.dart';
+import 'package:nexus/features/search/presentation/screens/search_screen.dart';
 
 part 'shell_routes.g.dart';
 

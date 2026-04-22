@@ -3,8 +3,8 @@ import 'dart:math' as math;
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:interactive_learn/features/progress/data/models/weekly_subject_progress.dart';
-import 'package:interactive_learn/features/progress/presentation/widgets/progress_chart_card.dart';
+import 'package:nexus/features/progress/data/models/weekly_subject_progress.dart';
+import 'package:nexus/features/progress/presentation/widgets/progress_chart_card.dart';
 
 class ProgressWeeklyTab extends StatelessWidget {
   final List<WeeklySubjectProgress> data;

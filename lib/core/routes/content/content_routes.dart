@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:interactive_learn/core/routes/models/nav_payloads.dart';
-import 'package:interactive_learn/features/content/data/models/subject.dart';
-import 'package:interactive_learn/features/content/presentation/screens/chapters_screen.dart';
-import 'package:interactive_learn/features/content/presentation/screens/subjects_screen.dart';
-import 'package:interactive_learn/features/content/presentation/screens/subtopics_screen.dart';
-import 'package:interactive_learn/features/content/presentation/screens/topics_screen.dart';
-import 'package:interactive_learn/features/content/presentation/slides/slide_viewer_screen.dart';
+import 'package:nexus/core/routes/models/nav_payloads.dart';
+import 'package:nexus/features/content/data/models/subject.dart';
+import 'package:nexus/features/content/presentation/screens/chapters_screen.dart';
+import 'package:nexus/features/content/presentation/screens/subjects_screen.dart';
+import 'package:nexus/features/content/presentation/screens/subtopics_screen.dart';
+import 'package:nexus/features/content/presentation/screens/topics_screen.dart';
+import 'package:nexus/features/content/presentation/slides/slide_viewer_screen.dart';
 
 part 'content_routes.g.dart';
 

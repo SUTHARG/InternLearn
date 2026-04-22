@@ -1,5 +1,5 @@
-import 'package:interactive_learn/features/content/data/models/chapter.dart';
-import 'package:interactive_learn/core/singleton.dart';
+import 'package:nexus/features/content/data/models/chapter.dart';
+import 'package:nexus/core/singleton.dart';
 
 class ChapterService {
   static Future<List<Chapter>> fetchChapters(int subjectId) async {

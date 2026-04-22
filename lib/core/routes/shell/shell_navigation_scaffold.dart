@@ -1,7 +1,7 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:interactive_learn/core/routes/app_route_paths.dart';
+import 'package:nexus/core/routes/app_route_paths.dart';
 
 class ShellNavigationScaffold extends StatelessWidget {
   const ShellNavigationScaffold({

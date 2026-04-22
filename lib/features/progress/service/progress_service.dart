@@ -1,8 +1,8 @@
-import 'package:interactive_learn/features/progress/data/models/progress_summary.dart';
-import 'package:interactive_learn/features/progress/data/models/progress_update_result.dart';
-import 'package:interactive_learn/features/progress/data/models/completed_lesson.dart';
-import 'package:interactive_learn/features/progress/data/models/weekly_subject_progress.dart';
-import 'package:interactive_learn/core/singleton.dart';
+import 'package:nexus/features/progress/data/models/progress_summary.dart';
+import 'package:nexus/features/progress/data/models/progress_update_result.dart';
+import 'package:nexus/features/progress/data/models/completed_lesson.dart';
+import 'package:nexus/features/progress/data/models/weekly_subject_progress.dart';
+import 'package:nexus/core/singleton.dart';
 
 class ProgressService {
   static Future<ProgressSummary> getMyProgressSummary() async {

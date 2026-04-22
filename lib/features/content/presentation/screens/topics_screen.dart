@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:interactive_learn/features/content/data/models/chapter.dart';
-import 'package:interactive_learn/features/content/data/models/subject.dart';
-import 'package:interactive_learn/features/content/data/riverpod/content_provider.dart';
-import 'package:interactive_learn/features/progress/data/riverpod/progress_provider.dart';
-import 'package:interactive_learn/core/skeleton/loading_skeletons.dart';
-import 'package:interactive_learn/features/content/presentation/widgets/topic_card.dart';
+import 'package:nexus/features/content/data/models/chapter.dart';
+import 'package:nexus/features/content/data/models/subject.dart';
+import 'package:nexus/features/content/data/riverpod/content_provider.dart';
+import 'package:nexus/features/progress/data/riverpod/progress_provider.dart';
+import 'package:nexus/core/skeleton/loading_skeletons.dart';
+import 'package:nexus/features/content/presentation/widgets/topic_card.dart';
 
 class TopicsScreen extends ConsumerWidget {
   final Subject subject;

@@ -1,11 +1,11 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:interactive_learn/core/landing/screens/home_screen.dart';
-import 'package:interactive_learn/features/profile/presentation/screens/profile_screen.dart';
-import 'package:interactive_learn/features/search/presentation/screens/search_screen.dart';
-import 'package:interactive_learn/features/progress/presentation/screens/progress_screen.dart';
-import 'package:interactive_learn/features/leaderboard/presentation/screens/leaderboard_screen.dart'; // 1. Imported your new screen
+import 'package:nexus/core/landing/screens/home_screen.dart';
+import 'package:nexus/features/profile/presentation/screens/profile_screen.dart';
+import 'package:nexus/features/search/presentation/screens/search_screen.dart';
+import 'package:nexus/features/progress/presentation/screens/progress_screen.dart';
+import 'package:nexus/features/leaderboard/presentation/screens/leaderboard_screen.dart'; // 1. Imported your new screen
 
 
 class TabWidgetTree extends HookWidget {

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'package:interactive_learn/core/theme/theme.dart';
-import 'package:interactive_learn/core/routes/app_router.dart';
-import 'package:interactive_learn/core/theme/riverpod/theme_provider.dart';
+import 'package:nexus/core/theme/theme.dart';
+import 'package:nexus/core/routes/app_router.dart';
+import 'package:nexus/core/theme/riverpod/theme_provider.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {
@@ -27,7 +27,7 @@ class MyApp extends ConsumerWidget {
 
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      title: 'Intern Learn',
+      title: 'Nexus',
       theme: MainAppTheme.light,
       darkTheme: MainAppTheme.dark,
       themeMode: theme,

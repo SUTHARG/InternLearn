@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:interactive_learn/features/auth/presentation/widgets/signup_form.dart';
+import 'package:nexus/features/auth/presentation/widgets/signup_form.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -15,10 +15,10 @@ class SignupScreen extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Image.asset(
-                'assets/images/logo.png',
-                height: 80,
-                width: 150,
-                fit: BoxFit.cover,
+                'assets/images/app_logo.png',
+                height: 100,
+                width: 180,
+                fit: BoxFit.contain,
               ),
               const SizedBox(height: 24),
               const SignupForm(),

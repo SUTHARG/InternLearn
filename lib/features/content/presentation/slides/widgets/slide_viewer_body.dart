@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:interactive_learn/features/content/data/models/slides/slide.dart';
-import 'package:interactive_learn/features/content/data/models/slides/slide_match.dart';
-import 'package:interactive_learn/features/content/data/models/slides/slide_mcq.dart';
-import 'package:interactive_learn/features/progress/data/riverpod/progress_provider.dart';
-import 'package:interactive_learn/features/content/data/riverpod/slide_provider.dart';
-import 'package:interactive_learn/features/content/presentation/slides/widgets/content_slide.dart';
-import 'package:interactive_learn/features/content/presentation/slides/widgets/match_slide.dart';
-import 'package:interactive_learn/features/content/presentation/slides/widgets/mcq_slide.dart';
-import 'package:interactive_learn/features/content/presentation/slides/widgets/segmented_progress.dart';
+import 'package:nexus/features/content/data/models/slides/slide.dart';
+import 'package:nexus/features/content/data/models/slides/slide_match.dart';
+import 'package:nexus/features/content/data/models/slides/slide_mcq.dart';
+import 'package:nexus/features/progress/data/riverpod/progress_provider.dart';
+import 'package:nexus/features/content/data/riverpod/slide_provider.dart';
+import 'package:nexus/features/content/presentation/slides/widgets/content_slide.dart';
+import 'package:nexus/features/content/presentation/slides/widgets/match_slide.dart';
+import 'package:nexus/features/content/presentation/slides/widgets/mcq_slide.dart';
+import 'package:nexus/features/content/presentation/slides/widgets/segmented_progress.dart';
 
 sealed class _SlideEntry {
   int get order;

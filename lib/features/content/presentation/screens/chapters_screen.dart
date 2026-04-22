@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:interactive_learn/features/content/data/models/subject.dart';
-import 'package:interactive_learn/features/content/data/riverpod/content_provider.dart';
-import 'package:interactive_learn/features/progress/data/riverpod/progress_provider.dart';
-import 'package:interactive_learn/core/skeleton/loading_skeletons.dart';
-import 'package:interactive_learn/features/content/presentation/widgets/chapter_card.dart';
+import 'package:nexus/features/content/data/models/subject.dart';
+import 'package:nexus/features/content/data/riverpod/content_provider.dart';
+import 'package:nexus/features/progress/data/riverpod/progress_provider.dart';
+import 'package:nexus/core/skeleton/loading_skeletons.dart';
+import 'package:nexus/features/content/presentation/widgets/chapter_card.dart';
 
 class ChaptersPage extends ConsumerWidget {
   final Subject subject;

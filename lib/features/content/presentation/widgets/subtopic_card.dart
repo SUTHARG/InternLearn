@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:interactive_learn/core/routes/app_routes.dart';
-import 'package:interactive_learn/features/content/data/models/subtopic.dart';
+import 'package:nexus/core/routes/app_routes.dart';
+import 'package:nexus/features/content/data/models/subtopic.dart';
 
 class SubtopicCard extends StatelessWidget {
   final Subtopic subtopic;

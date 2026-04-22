@@ -1,6 +1,6 @@
-import 'package:interactive_learn/features/content/data/models/chapter.dart';
-import 'package:interactive_learn/features/content/data/models/subject.dart';
-import 'package:interactive_learn/features/content/data/models/topic.dart';
+import 'package:nexus/features/content/data/models/chapter.dart';
+import 'package:nexus/features/content/data/models/subject.dart';
+import 'package:nexus/features/content/data/models/topic.dart';
 
 class TopicsNavData {
   const TopicsNavData({required this.subject, required this.chapter});

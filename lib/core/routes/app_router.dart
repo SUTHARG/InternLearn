@@ -1,11 +1,11 @@
 import 'package:go_router/go_router.dart';
-import 'package:interactive_learn/core/routes/app_route_paths.dart';
-import 'package:interactive_learn/core/routes/auth/auth_routes.dart';
-import 'package:interactive_learn/core/routes/content/content_routes.dart';
-import 'package:interactive_learn/core/routes/profile/profile_routes.dart';
-import 'package:interactive_learn/core/routes/shell/shell_navigation_scaffold.dart';
-import 'package:interactive_learn/core/routes/shell/shell_routes.dart';
-import 'package:interactive_learn/core/singleton.dart';
+import 'package:nexus/core/routes/app_route_paths.dart';
+import 'package:nexus/core/routes/auth/auth_routes.dart';
+import 'package:nexus/core/routes/content/content_routes.dart';
+import 'package:nexus/core/routes/profile/profile_routes.dart';
+import 'package:nexus/core/routes/shell/shell_navigation_scaffold.dart';
+import 'package:nexus/core/routes/shell/shell_routes.dart';
+import 'package:nexus/core/singleton.dart';
 
 final GoRouter appRouter = GoRouter(
   initialLocation: AppRoutePaths.rootPath,

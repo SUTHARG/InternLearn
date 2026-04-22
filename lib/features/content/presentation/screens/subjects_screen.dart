@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:interactive_learn/features/content/data/riverpod/content_provider.dart';
-import 'package:interactive_learn/core/skeleton/loading_skeletons.dart';
-import 'package:interactive_learn/features/content/presentation/widgets/subject_card.dart';
+import 'package:nexus/features/content/data/riverpod/content_provider.dart';
+import 'package:nexus/core/skeleton/loading_skeletons.dart';
+import 'package:nexus/features/content/presentation/widgets/subject_card.dart';
 
 class SubjectsScreen extends ConsumerWidget {
   const SubjectsScreen({super.key});

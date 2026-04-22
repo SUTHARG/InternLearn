@@ -1,11 +1,11 @@
-import 'package:interactive_learn/features/content/data/models/chapter.dart';
-import 'package:interactive_learn/features/content/data/models/subject.dart';
-import 'package:interactive_learn/features/content/data/models/subtopic.dart';
-import 'package:interactive_learn/features/content/data/models/topic.dart';
-import 'package:interactive_learn/features/content/services/chapter_service.dart';
-import 'package:interactive_learn/features/content/services/subject_service.dart';
-import 'package:interactive_learn/features/content/services/subtopic_service.dart';
-import 'package:interactive_learn/features/content/services/topic_service.dart';
+import 'package:nexus/features/content/data/models/chapter.dart';
+import 'package:nexus/features/content/data/models/subject.dart';
+import 'package:nexus/features/content/data/models/subtopic.dart';
+import 'package:nexus/features/content/data/models/topic.dart';
+import 'package:nexus/features/content/services/chapter_service.dart';
+import 'package:nexus/features/content/services/subject_service.dart';
+import 'package:nexus/features/content/services/subtopic_service.dart';
+import 'package:nexus/features/content/services/topic_service.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'content_provider.g.dart';

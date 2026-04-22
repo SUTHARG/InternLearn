@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 // import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
-import 'package:interactive_learn/features/content/data/models/slides/slide_match.dart';
+import 'package:nexus/features/content/data/models/slides/slide_match.dart';
 
 class MatchSlideWidget extends HookWidget {
   final SlideMatch match;

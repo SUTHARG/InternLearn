@@ -1,9 +1,9 @@
-import 'package:interactive_learn/features/content/data/models/chapter.dart';
-import 'package:interactive_learn/features/search/data/models/search_result_item.dart';
-import 'package:interactive_learn/features/content/data/models/subject.dart';
-import 'package:interactive_learn/features/content/data/models/subtopic.dart';
-import 'package:interactive_learn/features/content/data/models/topic.dart';
-import 'package:interactive_learn/core/singleton.dart';
+import 'package:nexus/features/content/data/models/chapter.dart';
+import 'package:nexus/features/search/data/models/search_result_item.dart';
+import 'package:nexus/features/content/data/models/subject.dart';
+import 'package:nexus/features/content/data/models/subtopic.dart';
+import 'package:nexus/features/content/data/models/topic.dart';
+import 'package:nexus/core/singleton.dart';
 
 class SearchService {
   static Future<List<SearchResultItem>> searchContent(String query) async {

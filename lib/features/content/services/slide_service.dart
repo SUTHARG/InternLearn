@@ -1,7 +1,7 @@
-import 'package:interactive_learn/features/content/data/models/slides/slide.dart';
-import 'package:interactive_learn/features/content/data/models/slides/slide_match.dart';
-import 'package:interactive_learn/features/content/data/models/slides/slide_mcq.dart';
-import 'package:interactive_learn/core/singleton.dart';
+import 'package:nexus/features/content/data/models/slides/slide.dart';
+import 'package:nexus/features/content/data/models/slides/slide_match.dart';
+import 'package:nexus/features/content/data/models/slides/slide_mcq.dart';
+import 'package:nexus/core/singleton.dart';
 
 class SlideService {
   static Future<List<Slide>> getSlides(int subtopicId) async {

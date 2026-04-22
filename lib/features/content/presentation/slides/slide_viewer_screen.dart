@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:interactive_learn/features/content/data/riverpod/slide_provider.dart';
-import 'package:interactive_learn/core/skeleton/loading_skeletons.dart';
-import 'package:interactive_learn/features/content/presentation/slides/widgets/slide_viewer_body.dart';
+import 'package:nexus/features/content/data/riverpod/slide_provider.dart';
+import 'package:nexus/core/skeleton/loading_skeletons.dart';
+import 'package:nexus/features/content/presentation/slides/widgets/slide_viewer_body.dart';
 
 
 class SlideViewerScreen extends HookConsumerWidget {
