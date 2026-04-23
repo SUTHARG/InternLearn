@@ -1,6 +1,7 @@
 import 'dart:async';
 
-import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class NotificationSettingsState {
@@ -24,16 +25,20 @@ class NotificationSettingsState {
   }
 }
 
-class NotificationSettingsNotifier
-    extends StateNotifier<NotificationSettingsState> {
-  NotificationSettingsNotifier()
-    : super(
-        const NotificationSettingsState(
-          notificationsEnabled: true,
-          pushNotificationsEnabled: true,
-        ),
-      ) {
+abstract class _$NotificationSettings extends Notifier<NotificationSettingsState> {
+  @override
+  NotificationSettingsState build();
+}
+
+@Riverpod(keepAlive: true)
+class NotificationSettings extends _$NotificationSettings {
+  @override
+  NotificationSettingsState build() {
     unawaited(_restore());
+    return const NotificationSettingsState(
+      notificationsEnabled: true,
+      pushNotificationsEnabled: true,
+    );
   }
 
   static const _notificationsEnabledKey = 'notifications_enabled';
@@ -89,10 +94,8 @@ class NotificationSettingsNotifier
   }
 }
 
-final notificationSettingsProvider =
-    StateNotifierProvider<
-      NotificationSettingsNotifier,
-      NotificationSettingsState
-    >((ref) {
-      return NotificationSettingsNotifier();
-    });
+final notificationSettingsProvider = NotifierProvider<NotificationSettings,
+    NotificationSettingsState>(
+  NotificationSettings.new,
+  name: 'notificationSettingsProvider',
+);
