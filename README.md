@@ -1,243 +1,252 @@
 # Nexus
 
-Nexus is a Flutter + Supabase app for technical learning (DSA and similar subjects).
+Nexus is a cross-platform Flutter learning app backed by Supabase.
 
-The app uses a content hierarchy:
+It uses a structured learning path:
 
-`Subject -> Chapter -> Topic -> Subtopic -> Slides`
+Subject -> Chapter -> Topic -> Subtopic -> Slides
 
-Slides are rendered from Supabase in three formats:
+Slides support three types:
+- slide: markdown lesson content
+- slide_mcq: multiple-choice interaction
+- slide_match: match-the-pairs interaction
 
-- `slide` (markdown lesson content)
-- `slide_mcq` (multiple-choice question)
-- `slide_match` (match-the-pairs interaction)
+## Current Status
+
+This documentation reflects the current codebase structure and behavior.
+
+- App name: Nexus
+- Package name: nexus
+- Flutter routing: GoRouter + typed routes + ShellRoute
+- Main tabs: Home, Search, Leaderboard, Progress, Profile
+- Backend: Supabase Auth + PostgreSQL
 
 ## Tech Stack
 
 - Flutter (Material 3)
-- Supabase (`supabase_flutter`)
-- Riverpod + Hooks (`hooks_riverpod`, `riverpod_annotation`, `flutter_hooks`)
-- Freezed + JSON serialization (`freezed`, `json_serializable`, `freezed_annotation`, `json_annotation`)
-- Markdown rendering (`flutter_markdown_plus`)
-- Environment configuration (`flutter_dotenv`)
-- Logging (`logger`)
+- Supabase: supabase_flutter
+- State: hooks_riverpod, flutter_riverpod, riverpod_annotation
+- Routing: go_router, go_router_builder, go_router_paths
+- Models/codegen: freezed, json_serializable, build_runner
+- UI helpers: flutter_hooks, fl_chart, convex_bottom_bar, random_avatar
+- Content rendering: flutter_markdown_plus
+- Config: flutter_dotenv
+- Logging: logger
 
-## App Flow (Detailed)
+## App Architecture
 
-## 1) App Bootstrap
+The app is organized by feature.
 
-1. `main.dart` initializes Flutter bindings.
-2. `.env` is loaded using `flutter_dotenv`.
-3. Supabase is initialized with `SUPABASE_URL` and `SUPABASE_KEY`.
-4. App starts inside `ProviderScope`.
-5. Home widget is `AuthGate`.
+Each feature generally follows:
+- data: models + riverpod providers
+- services (or service): Supabase/data access logic
+- presentation: screens + widgets
 
-## 2) Authentication Flow
-
-1. `AuthGate` watches `authStateProvider`.
-2. If session exists, user goes to `TabWidgetTree`.
-3. If session does not exist, user sees `LoginPage`.
-4. `LoginForm` uses `supabase.auth.signInWithPassword`.
-5. `SignupForm` uses `supabase.auth.signUp`.
-6. `ProfilePage` can trigger `supabase.auth.signOut`.
-
-Routing is session-driven: successful auth updates state and `AuthGate` switches screens automatically.
-
-## 3) Main Navigation Flow
-
-`TabWidgetTree` uses a bottom `NavigationBar` with:
-
-- Home
-- Search
-- Profile
-
-Each tab is rendered as a page in the main scaffold body.
-
-## 4) Learning Content Flow
-
-The learning browse journey is:
-
-1. Home/Search shows subjects (from provider data).
-2. Tap subject -> `ChaptersPage`
-3. Tap chapter -> `TopicsPage`
-4. Tap topic -> `SubtopicsPage`
-5. Tap subtopic -> `SlideViewerPage`
-
-This is implemented with providers in `lib/core/providers/content_provider.dart`:
-
-- `subjectProvider`
-- `chapterProvider(subjectId)`
-- `topicProvider(chapterId)`
-- `subtopicProvider(topicId)`
-
-## 5) Slide Viewer Flow
-
-`SlideViewerPage` loads `slidesProvider(subtopicId)`.
-
-`slidesProvider` returns a `SlidesForSubtopic` object containing:
-
-- `slides`
-- `mcqSlides`
-- `matchSlides`
-
-`SlideViewerBody` then:
-
-1. Merges all slide types into one ordered sequence by `order`.
-2. Shows progress using segmented progress UI.
-3. Locks forward navigation for interactive slides until completion.
-4. Uses `Next` and `Back` controls for lesson movement.
-5. Ends lesson on `Finish`.
-
-### Slide Types
-
-- `ContentSlideWidget`: Markdown lesson content and key points.
-- `McqSlideWidget`: Option selection, correctness feedback, explanation.
-- `MatchSlideWidget`: Left-right matching flow with completion tracking.
-
-## Architecture and Data Flow
-
-App layers follow this pattern:
-
-`Supabase Service -> Riverpod Provider -> UI Page/Widget`
-
-### Services
-
-- Located in `lib/core/services/`
-- Static methods only
-- Responsible for Supabase table queries and mapping JSON to models
-
-### Providers
-
-- Located in `lib/core/providers/`
-- Generated via `riverpod_generator`
-- Wrap services and expose async state to UI
-
-### Models
-
-- Located in `lib/core/models/`
-- Freezed immutable classes + `fromJson` factories
-
-## Folder Structure
+Top-level layout:
 
 ```text
-nexus/
-
-	assets/
-		images/
-
-	lib/
-		main.dart
-
-		core/
-			singleton.dart                  # global supabase client + logger
-			models/
-				chapter.dart
-				slide.dart
-				slide_match.dart
-				slide_mcq.dart
-				subject.dart
-				subtopic.dart
-				topic.dart
-				*.freezed.dart
-				*.g.dart
-			providers/
-				auth_provider.dart
-				content_provider.dart
-				slide_provider.dart
-				*.g.dart
-			services/
-				chapter_service.dart
-				slide_service.dart
-				subject_service.dart
-				subtopic_service.dart
-				topic_service.dart
-
-		pages/
-			tab_widget_tree.dart
-
-			auth/
-				login.dart
-				signup.dart
-				widgets/
-					login_form.dart
-					signup_form.dart
-
-			content/
-				subjects_page.dart
-				chapters_page.dart
-				topics_page.dart
-				subtopics_page.dart
-				widgets/
-					subject_card.dart
-					chapter_card.dart
-					topic_card.dart
-					subtopic_card.dart
-
-			slides/
-				slide_viewer_page.dart
-				widgets/
-					slide_viewer_body.dart
-					segmented_progress.dart
-					content_slide.dart
-					mcq_slide.dart
-					match_slide.dart
-
-			tabs/
-				home_page.dart
-				search_page.dart
-				profile_page.dart
-				widgets/
-					subject_grid.dart
-
-	supabase/
-		config.toml
-		migrations/
-
-	test/
-		widget_test.dart
-
-	pubspec.yaml
-	analysis_options.yaml
+lib/
+  main.dart
+  core/
+    landing/
+    providers/
+    routes/
+    singleton.dart
+    theme/
+    widgets/
+  features/
+    auth/
+    content/
+    leaderboard/
+    profile/
+    progress/
+    search/
+    slides/
 ```
 
-## Setup
+## Navigation and Routing
 
-Create a `.env` in project root:
+Routing is configured in core routes with auth-aware redirects.
+
+- Unauthenticated users are redirected to /login or /signup.
+- Authenticated users are redirected away from auth routes to /.
+- Shell navigation contains five tabs.
+
+Primary shell tabs:
+- /
+- /search
+- /leaderboard
+- /progress
+- /profile
+
+Additional routes include:
+- /login
+- /signup
+- content drilldown routes (chapters/topics/subtopics/slides)
+- profile routes (edit profile, avatar picker, notifications, theme)
+
+## Authentication Flow
+
+1. App starts and loads .env.
+2. Supabase initializes using SUPABASE_URL and SUPABASE_ANON_KEY.
+3. Router redirect checks session state.
+4. If not logged in, user goes to Login/Signup.
+5. If logged in, user lands in shell tabs.
+
+## Learning and Progress Flow
+
+Content path:
+- Subject -> Chapter -> Topic -> Subtopic -> Slide viewer
+
+Slide viewer behavior:
+- Merges content + MCQ + match slides by order.
+- Content slides are always navigable.
+- Interactive slides require completion before proceeding.
+- On finish, completion action triggers RPC-based progress + XP updates.
+
+Progress and XP are tied to Supabase objects and RPCs.
+
+## Supabase Schema (High Level)
+
+Core content tables:
+- subject
+- chapter
+- topic
+- subtopic
+- slide
+- slide_mcq
+- slide_match
+
+User progress/profile tables:
+- user_profile
+- user_subtopic_progress
+- user_topic_progress
+- user_chapter_progress
+
+RPC/functions used by app include:
+- complete_subtopic_and_award_xp
+- get_my_progress_summary
+- get_recent_completed_lessons
+- get_weekly_subject_progress
+
+Reference migration:
+- supabase/migrations/20260416150811_remote_schema.sql
+
+## Environment Setup
+
+Create a .env file in project root:
 
 ```env
 SUPABASE_URL=your_supabase_project_url
-SUPABASE_KEY=your_supabase_anon_key
+SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
-Also ensure `.env` is included in assets in `pubspec.yaml`.
+Note:
+- .env is loaded in app startup.
+- .env is declared in assets in pubspec.yaml.
 
 ## Development Commands
 
+Install dependencies:
+
 ```bash
 flutter pub get
-dart run build_runner build -d
-flutter run
-flutter analyze
-flutter test
 ```
 
-Use watch mode when frequently changing providers/models:
+Run code generation:
+
+```bash
+dart run build_runner build -d
+```
+
+Watch code generation (recommended while editing providers/models/routes):
 
 ```bash
 dart run build_runner watch -d
 ```
 
-## Conventions Used In This Project
+Run app:
 
-- Services are static (no service instances)
-- Providers are annotated with `@riverpod`
-- JSON uses snake_case and maps to Dart camelCase via `@JsonKey`
-- UI consumes providers using `HookWidget` / `ConsumerWidget` / `HookConsumerWidget`
+```bash
+flutter run
+```
 
-## Current Learning Scope
+Analyze and test:
 
-- Auth: email/password login + signup + logout
-- Content browsing: subject to subtopic fully wired
-- Slide viewer: content + MCQ + match interactions
+```bash
+flutter analyze
+flutter test
+```
 
-Next enhancement area: progress tracking, XP/streak persistence, and lesson analytics.
+## Platform Support
+
+Scaffolded for:
+- Android
+- iOS
+- Web
+- Windows
+- Linux
+- macOS
+
+## Troubleshooting
+
+### App crashes on startup with null check error
+
+This usually means one of the required environment variables is missing.
+
+Checklist:
+- Ensure a .env file exists in project root.
+- Ensure these keys are present and non-empty:
+  - SUPABASE_URL
+  - SUPABASE_ANON_KEY
+- Run flutter pub get again after creating or editing .env.
+
+### Changes to providers/routes/models are not reflected
+
+Generated files may be stale.
+
+Fix:
+- Run: dart run build_runner build -d
+- For active development, run: dart run build_runner watch -d
+
+### Build errors after dependency updates
+
+Cached artifacts can become inconsistent.
+
+Fix sequence:
+- flutter clean
+- flutter pub get
+- dart run build_runner build -d
+
+### Supabase auth works but data queries fail
+
+Possible causes:
+- Wrong project URL/key in .env
+- Missing database objects or RPCs in your Supabase project
+- Migration not applied
+
+Fix:
+- Verify credentials in .env
+- Check that schema objects and RPC functions from
+  supabase/migrations/20260416150811_remote_schema.sql
+  exist in your Supabase database
+
+### Route generation/type route issues
+
+If typed routes stop compiling, regenerate code:
+- dart run build_runner build -d
+
+If errors persist, check imports and part files in core/routes.
+
+## Known Limitations
+
+- Leaderboard currently uses local mock data in provider code and is not yet backed by Supabase.
+- Notification settings are local-device preferences only and do not trigger a server-side push pipeline.
+- Theme preference is stored per device and does not currently sync across devices.
+- Slide completion/progress updates depend on Supabase RPC availability and network connectivity; there is no offline sync queue.
+- Some profile flows are still evolving; avatar selection UI exists, but profile persistence behavior should be validated end-to-end in your environment.
+
+## Notes
+
+- Source of truth for app configuration is code and pubspec.
+- If documentation and implementation diverge, implementation should be treated as authoritative.
