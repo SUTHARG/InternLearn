@@ -5,6 +5,7 @@ import 'package:nexus/core/routes/content/content_routes.dart';
 import 'package:nexus/core/routes/profile/profile_routes.dart';
 import 'package:nexus/core/routes/shell/shell_navigation_scaffold.dart';
 import 'package:nexus/core/routes/shell/shell_routes.dart';
+import 'package:nexus/core/routes/slides/slide_routes.dart';
 import 'package:nexus/core/singleton.dart';
 import 'package:nexus/features/profile/presentation/screens/notifications_settings_screen.dart';
 import 'package:nexus/features/profile/presentation/screens/theme_settings_screen.dart';
@@ -29,7 +30,6 @@ final GoRouter appRouter = GoRouter(
     ),
     $loginRoute,
     $signupRoute,
-    $subjectsRoute,
     $chaptersRoute,
     $topicsRoute,
     $subtopicsRoute,
